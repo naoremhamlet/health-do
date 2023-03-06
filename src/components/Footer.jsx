@@ -123,6 +123,8 @@ const Section = styled.footer`
       img {
         height: 4rem;
         width: 10rem;
+        align-self: center;
+        margin: 1rem;
       }
     }
   }

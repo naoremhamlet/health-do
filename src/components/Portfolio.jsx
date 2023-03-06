@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import background from "../assets/image/about2.JPG";
+import background from "../assets/image/about.jpg";
 export default function Portfolio() {
   return (
     <Section id="portfolio">

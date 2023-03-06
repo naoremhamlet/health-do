@@ -2,10 +2,12 @@
 <!-- Generator: Adobe Illustrator 27.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 3000 3000" style="enable-background:new 0 0 3000 3000;" xml:space="preserve">
+<!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
+
 <style type="text/css">
-	.st0{fill:#0C0C0C;}
-	.st1{font-family:'NexaHeavy';}
-	.st2{font-size:318.5707px;}
+	.st0{fill:#218028;}
+	.st1{font-family:'Poppins'; font-weight:900;}
+	.st2{font-size:350px;}
 	.st3{letter-spacing:31;}
 </style>
 <g id="logo">
@@ -1287,6 +1289,6 @@
 	</g>
 </g>
 <g id="Text">
-	<text transform="matrix(1 0 0 1 419.3721 2688.7822)" class="st0 st1 st2 st3">HEALTH DO</text>
+	<text transform="matrix(1 0 0 1 530 2700)" class="st0 st1 st2 st3" letter-spacing="15px">HEALTH DO</text>
 </g>
 </svg>
