@@ -9,24 +9,28 @@ export default function Products() {
   const data = [
     {
       image: product1,
-      name: "hie",
-      price: "$22.4/pcs",
+      name: "Chicken Tortilla",
+      price: "₹220",
+      ingredient: "blackened chicken, tomato, raw carrot, cilantro, tortilla chips, cheese, warm quinoa, baby spinach, hot sauce, lime cilantro chilli vinaigrette"
     },
     {
       image: product2,
-      name: "Toasted Bread",
-      price: "$5.5/pcs",
+      name: "Harvest Bowl",
+      price: "₹220",
+      ingredient: "roasted chicken, roasted sweet potato, apple, cheese, roasted almond, warm wild rice, shredded kale, balsamic vinaigrette"
     },
     {
       image: product3,
-      name: "Egg Sandwich",
-      price: "$8/pcs",
+      name: "Avocado Green Bowl",
+      price: "₹220",
+      ingredient: "roasted chicken, avocado, tomato, red onion, shredded cabbage, tortilla chips, spring mix, chopped romaine, lime squeeze, lime cilantro chilli vinaigrette"
     },
 
     {
       image: product4,
-      name: "Raspberry Cake",
-      price: "$12.5/pcs",
+      name: "Garden Cobb",
+      price: "₹160",
+      ingredient: "avocado, hard boiled egg, roasted sweet potato, tomato, red onion, cheese, roasted almond, spring mix, chopped romaine, balsamic vinaigrette"
     },
   ];
   return (
@@ -45,7 +49,7 @@ export default function Products() {
               </div>
               <h2>{product.name}</h2>
               <h3>{product.price}</h3>
-              <p>He Printing and Typesetting the industry. Lorem Ipsum has</p>
+              <p>{product.ingredient}</p>
               <button>Buy Now</button>
             </div>
           );
@@ -84,7 +88,7 @@ const Section = styled.section`
         border-radius: 1rem;
         img {
           height: 20rem;
-          width: 15rem;
+          width: 20rem;
           object-fit: cover;
         }
       }

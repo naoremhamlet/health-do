@@ -19,10 +19,9 @@ export default function Hero() {
           </h1>
         </div>
         <div className="info">
-          <h2>RETAILER</h2>
+          <h2>HEALTH DO</h2>
           <em>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-            aspernatur itaque, eius quia voluptas numquam!
+          Order your favourite salad now and help us feed the less fortunate
           </em>
           <button>ORDER NOW</button>
         </div>

@@ -12,21 +12,28 @@ export default function Footer() {
         <div className="brand container">
           <img src={logo} alt="" />
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis,
-            repudiandae.
+          Filling the gap of healthy fast food in the market.
           </p>
           <ul>
             <li>
-              <AiFillInstagram />
+              <a href="https://www.instagram.com/health_do/" target="_blank">
+                <AiFillInstagram />
+              </a>
             </li>
             <li>
-              <FaFacebookF />
+              <a href="https://www.facebook.com/Healthdo.in" target="_blank">
+                <FaFacebookF />
+              </a>
             </li>
             <li>
-              <GrLinkedinOption />
+              <a href="https://www.google.com" target="_blank">
+                <GrLinkedinOption />
+              </a>
             </li>
             <li>
-              <BsTwitter />
+              <a href="https://www.google.com" target="_blank">
+                <BsTwitter />
+              </a>
             </li>
           </ul>
         </div>
@@ -35,19 +42,18 @@ export default function Footer() {
             <h3>About Us</h3>
           </div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam,
-            eligendi repellat laudantium blanditiis iure nulla, ut aliquam
-            itaque unde nesciunt cum veritatis perferendis vel expedita! Nam
+          We work to promote a healthy community through real food but educating the importance
+           of healthy eating and provide easy access to healthy food.
           </p>
         </div>
         <div className="contact container">
           <div className="title">
             <h3>Contact Us</h3>
           </div>
-          <p>+91 1231231231</p>
-          <p>healthdo@gmail.com</p>
-          <p>@health_do</p>
-          <p>Nongmeibung, Manipur, India</p>
+          <p><a href="tel:+919774430099">+91 97744 30099</a></p>
+          <p><a href="mailto:healthdo123@gmail.com"> healthdo123@gmail.com </a></p>
+          {/* <p>@health_do</p> */}
+          <p>Nongmeibung, Ananda School Road, Imphal, 795005</p>
         </div>
       </Section>
       <LowerFooter className="lower__footer">
@@ -71,6 +77,10 @@ const Section = styled.footer`
     font-size: 1.1rem;
     line-height: 2rem;
     letter-spacing: 0.1rem;
+    a {
+      text-decoration: none;
+      color: #ffff;
+    }
   }
   ul {
     display: flex;

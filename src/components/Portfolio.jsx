@@ -8,10 +8,9 @@ export default function Portfolio() {
         <img src={background} alt="" />
       </div>
       <div className="content">
-        <h1>Buy Premium Pan Free Hand Toast!</h1>
+        <h1>Our Mission!</h1>
         <h2>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi,
-          molestias!
+        Our mission is to provide you with delicious, nutritious food that is sustainably sourced and ethically produced. We use only the freshest, highest-quality ingredients, and strive to make every meal as healthy and nutrient-dense as possible.
         </h2>
         <button>Buy Now</button>
       </div>

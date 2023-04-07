@@ -1,36 +1,50 @@
 import React from "react";
 import styled from "styled-components";
-import Services1 from "../assets/Services1.png";
-import Services2 from "../assets/Services2.png";
-import Services3 from "../assets/Services3.png";
+import Organic from "../assets/icon/organic.svg";
+import Delivery from "../assets/icon/delivery.svg";
+import Custom from "../assets/icon/custom.svg";
 import { TitleStyles } from "./ReusableStyles";
+
+const data = [
+  {
+    name:"organic",
+    image: Organic,
+    desc:"We're committed to sourcing the highest quality organic ingredients and working with local farmers and producers whenever possible."
+  },
+  {
+    name:"delivery",
+    image: Delivery,
+    desc:"We understand that your time is valuable, which is why we work tirelessly to ensure that your orders are delivered to you in a timely and reliable manner."
+  },
+  {
+    name:"custom",
+    image: Custom,
+    desc:"We are a team of food enthusiasts who are passionate about creating delicious, healthy meals that you can customize to your liking."
+  },
+]
+
 export default function Services() {
   return (
     <Section id="services">
       <div className="title">
         <h1 className="heading">What we do?</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur,
-          incidunt magnam labore ipsam vero minima maxime doloribus dolores ipsa
-          soluta.
+        We are a team of passionate food lovers who are dedicated to promoting health and wellness through delicious, nutrient-dense meals made from the highest-quality ingredients.
+        {/* We understand that everyone has different dietary needs and preferences, which is why we offer a wide range of options to suit all lifestyles, from vegetarian and vegan to paleo and gluten-free. Whether you're looking for a quick and healthy meal on-the-go or a fully customizable meal plan, we've got you covered. */}
+
         </p>
       </div>
       <div className="services">
-        <div className="service">
-          <img src={Services2} alt="" />
-          <p>
-            He Printing and Typesetting the industry. <span>Lorem Ipsum</span>{" "}
-            has been the Industry's
-          </p>
-          <button>Read More</button>
-        </div>
-        <div className="service yellow">
+        {data.map(el => <div className="service">
+          <img src={el.image} alt="" />
+          <p> {el.desc} </p>
+        </div>)}
+        {/* <div className="service yellow">
           <img src={Services1} alt="" />
           <p>
             He Printing and Typesetting the industry. <span>Lorem Ipsum</span>{" "}
             has been the Industry's
           </p>
-          <button>Read More</button>
         </div>
         <div className="service">
           <img src={Services3} alt="" />
@@ -38,8 +52,7 @@ export default function Services() {
             He Printing and Typesetting the industry. <span>Lorem Ipsum</span>{" "}
             has been the Industry's
           </p>
-          <button>Read More</button>
-        </div>
+        </div> */}
       </div>
     </Section>
   );

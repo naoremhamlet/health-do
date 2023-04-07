@@ -1,7 +1,28 @@
 import React from "react";
 import styled from "styled-components";
-import avatar1 from "../assets/image/profile.jpeg";
+import Sanathoi from "../assets/image/sanathoi.jpg";
+import Sophina from "../assets/image/sophina.jpg";
+import Sartaj from "../assets/image/sartaj.jpg";
 import { imageZoomEffect, TitleStyles } from "./ReusableStyles";
+
+const data = [
+  {
+    name: "Sanathoi Thockchom",
+    image: Sanathoi,
+    comment: "I've been a fan of organic, healthy eating for years, and this website is now my go-to for finding the best options for my lifestyle."
+  },
+  {
+    name: "Sophina Soubam",
+    image: Sophina,
+    comment: "The food provided is very good and helps me a lot in getting the lifestyle I want. I would love to recommend the food to everyone."
+  },
+  {
+    name: "Sartaj Sheikh",
+    image: Sartaj,
+    comment: "One of the things I appreciate most about healthdo is their commitment to sourcing only the highest quality ingredients."
+  }
+]
+
 export default function Testimonials() {
   return (
     <Section id="testimonials">
@@ -12,33 +33,17 @@ export default function Testimonials() {
           </h1>
         </div>
         <div className="testimonials">
-          <div className="testimonial">
-            <div className="image">
-              <img src={avatar1} alt="" />
+          {data.map(el => 
+            <div className="testimonial">
+              <div className="image">
+                <img src={el.image} alt="" />
+              </div>
+              <p>
+              <q>{el.comment} </q> <span> - {el.name} </span>
+              </p>
             </div>
-            <p>
-              He Printing and Typesetting the industry. <span>Lorem Ipsum</span>{" "}
-              has been the Industry's
-            </p>
-          </div>
-          <div className="testimonial">
-            <div className="image">
-              <img src={avatar1} alt="" />
-            </div>
-            <p>
-              He Printing and Typesetting the industry. <span>Lorem Ipsum</span>{" "}
-              has been the Industry's
-            </p>
-          </div>
-          <div className="testimonial">
-            <div className="image">
-              <img src={avatar1} alt="" />
-            </div>
-            <p>
-              He Printing and Typesetting the industry. <span>Lorem Ipsum</span>{" "}
-              has been the Industry's
-            </p>
-          </div>
+            
+            )}
         </div>
       </div>
     </Section>
@@ -82,6 +87,10 @@ const Section = styled.section`
           font-size: 1.1rem;
           line-height: 2rem;
           letter-spacing: 0.1rem;
+          q {
+            font-style: italic;
+            font-size: 14px;
+          }
           span {
             color: #1b7603;
           }
