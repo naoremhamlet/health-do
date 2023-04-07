@@ -16,22 +16,22 @@ export default function Footer() {
           </p>
           <ul>
             <li>
-              <a href="https://www.instagram.com/health_do/" target="_blank">
+              <a href="https://www.instagram.com/health_do/" target="_blank" rel = "noreferrer">
                 <AiFillInstagram />
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/Healthdo.in" target="_blank">
+              <a href="https://www.facebook.com/Healthdo.in" target="_blank" rel="noreferrer">
                 <FaFacebookF />
               </a>
             </li>
             <li>
-              <a href="https://www.google.com" target="_blank">
+              <a href="https://www.google.com" target="_blank" rel="noreferrer">
                 <GrLinkedinOption />
               </a>
             </li>
             <li>
-              <a href="https://www.google.com" target="_blank">
+              <a href="https://www.google.com" target="_blank" rel="noreferrer">
                 <BsTwitter />
               </a>
             </li>

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import hero from "../assets/image/bg.jpg";
-import heroDesign from "../assets/HeroDesign.png";
+import heroDesign from "../assets/image/HeroDesign.png";
 
 const discount = false;
 export default function Hero() {
