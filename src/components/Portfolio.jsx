@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import background from "../assets/image/about.jpg";
+import { styles } from "../constants/styles";
+import { MobileScreen } from "./ReusableStyles";
 export default function Portfolio() {
   return (
     <Section id="portfolio">
@@ -9,9 +11,9 @@ export default function Portfolio() {
       </div>
       <div className="content">
         <h1>Our Mission!</h1>
-        <h2>
+        <p>
         Our mission is to provide you with delicious, nutritious food that is sustainably sourced and ethically produced. We use only the freshest, highest-quality ingredients, and strive to make every meal as healthy and nutrient-dense as possible.
-        </h2>
+        </p>
         <button>Buy Now</button>
       </div>
     </Section>
@@ -57,7 +59,7 @@ const Section = styled.section`
       font-size: 3rem;
       width: 60%;
     }
-    h2 {
+    p {
       width: 60%;
     }
     button {
@@ -68,10 +70,10 @@ const Section = styled.section`
       border-radius: 4rem;
       transition: 0.5s ease-in-out;
       cursor: pointer;
-      background: linear-gradient(to right,#1b7603, #13b908);
+      background: ${styles.background};
       text-transform: uppercase;
       &:hover {
-        background: linear-gradient(to right, #13b908, #1b7603);
+        background: ${styles.reversebackground};
       }
     }
   }
@@ -82,7 +84,7 @@ const Section = styled.section`
         width: 90%;
         font-size: 1.5rem;
       }
-      h2 {
+      p {
         font-size: 1.2em;
         width: 90%;
       }
@@ -92,4 +94,5 @@ const Section = styled.section`
       }
     }
   }
+  ${MobileScreen};
 `;

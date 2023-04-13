@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { TitleStyles } from "./ReusableStyles";
+import { styles } from "../constants/styles";
 export default function Newsletter() {
   return (
     <Section id="newsletter">
@@ -30,7 +31,7 @@ const Section = styled.section`
   align-items: center;
   ${TitleStyles};
   .container {
-    background: linear-gradient(to right, #1b7603,#239c03, #13b908);
+    background: ${styles.tri_background};
     padding: 0.3vw;
     input {
       border: none;
@@ -57,6 +58,7 @@ const Section = styled.section`
     }
   }
   @media screen and (min-width: 260px) and (max-width: 1080px) {
+    padding: 2rem;
     .container {
       padding: 0.8rem;
       border-radius: 0.5rem;

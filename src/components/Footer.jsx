@@ -5,6 +5,8 @@ import { AiFillInstagram } from "react-icons/ai";
 import { BsTwitter } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
 import { GrLinkedinOption } from "react-icons/gr";
+import { styles } from "../constants/styles";
+import { MobileScreen } from "./ReusableStyles";
 export default function Footer() {
   return (
     <div className="footer">
@@ -67,7 +69,7 @@ export default function Footer() {
 
 const Section = styled.footer`
   margin: 0;
-  background: linear-gradient(to right, #1b7603, #13b908);
+  background: ${styles.background};
   color: white;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -138,6 +140,7 @@ const Section = styled.footer`
       }
     }
   }
+  ${MobileScreen};
 `;
 
 const LowerFooter = styled.div`

@@ -5,6 +5,13 @@ import product2 from "../assets/image/item2.png";
 import product3 from "../assets/image/item3.png";
 import product4 from "../assets/image/item5.png";
 import { imageZoomEffect, TitleStyles } from "./ReusableStyles";
+import { styles } from "../constants/styles";
+
+import Swiper from "swiper";
+
+// Import Swiper styles
+import 'swiper/css';
+
 export default function Products() {
   const data = [
     {
@@ -40,20 +47,24 @@ export default function Products() {
           <span>Favourite</span> All the time!
         </h1>
       </div>
+      
       <div className="products">
-        {data.map((product) => {
-          return (
-            <div className="product">
-              <div className="image">
-                <img src={product.image} alt="" />
+        <Swiper>
+          {data.map((product) => {
+            return (
+              <div className="product">
+                <div className="image">
+                  <img src={product.image} alt="" />
+                </div>
+                <h2>{product.name}</h2>
+                <h3>{product.price}</h3>
+                <p>{product.ingredient}</p>
+                <button>Buy Now</button>
               </div>
-              <h2>{product.name}</h2>
-              <h3>{product.price}</h3>
-              <p>{product.ingredient}</p>
-              <button>Buy Now</button>
-            </div>
-          );
-        })}
+            );
+          })}
+
+        </Swiper>
       </div>
     </Section>
   );
@@ -100,10 +111,10 @@ const Section = styled.section`
         border-radius: 4rem;
         transition: 0.5s ease-in-out;
         cursor: pointer;
-        background: linear-gradient(to right, #1b7603, #13b908);
+        background: ${styles.background};
         text-transform: uppercase;
         &:hover {
-          background: linear-gradient(to right, #13b908, #1b7603);
+          background: ${styles.reversebackground};
         }
       }
     }

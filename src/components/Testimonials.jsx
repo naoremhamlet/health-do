@@ -4,6 +4,7 @@ import Sanathoi from "../assets/image/sanathoi.jpg";
 import Sophina from "../assets/image/sophina.jpg";
 import Sartaj from "../assets/image/sartaj.jpg";
 import { imageZoomEffect, TitleStyles } from "./ReusableStyles";
+import { styles } from "../constants/styles";
 
 const data = [
   {
@@ -52,7 +53,7 @@ export default function Testimonials() {
 
 const Section = styled.section`
   margin: 5vw;
-  background: linear-gradient(to right, #1b7603, #13b908);
+  background: ${styles.background};
   padding: 0.2rem;
   border-radius: 1.5rem;
   position: relative;
@@ -110,6 +111,7 @@ const Section = styled.section`
   }
   @media screen and (min-width: 260px) and (max-width: 1080px) {
     .container {
+      margin: 0;
       .title {
         position: initial;
         background-color: transparent;

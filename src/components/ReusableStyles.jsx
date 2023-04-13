@@ -33,6 +33,10 @@ export const TitleStyles = css`
     }
   }
   @media screen and (min-width: 260px) and (max-width: 1080px) {
+    p {
+      font-size: 0.8rem!important;
+      line-height: 1.5rem!important;
+    }
     .title {
       gap: 1rem;
       h1 {
@@ -44,3 +48,11 @@ export const TitleStyles = css`
     }
   }
 `;
+
+export const MobileScreen = css`
+  @media screen and (min-width: 260px) and (max-width: 1080px) {
+    p,em {
+      font-size: 0.9rem!important;
+      line-height: 1.5rem!important;
+    }
+`

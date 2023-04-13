@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import hero from "../assets/image/bg.jpg";
 import heroDesign from "../assets/image/HeroDesign.png";
+import { MobileScreen } from "./ReusableStyles";
 
 const discount = false;
 export default function Hero() {
@@ -124,4 +125,5 @@ const Section = styled.section`
       }
     }
   }
+  ${MobileScreen};
 `;
