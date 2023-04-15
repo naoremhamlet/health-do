@@ -7,10 +7,14 @@ import product4 from "../assets/image/item5.png";
 import { imageZoomEffect, TitleStyles } from "./ReusableStyles";
 import { styles } from "../constants/styles";
 
-import Swiper from "swiper";
+import SwiperCore, {  Pagination, Navigation } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
-import 'swiper/css';
+import "swiper/swiper-bundle.min.css";
+import "swiper/swiper.min.css";
+
+SwiperCore.use([Navigation, Pagination]);
+
 
 export default function Products() {
   const data = [
@@ -48,8 +52,7 @@ export default function Products() {
         </h1>
       </div>
       
-      <div className="products">
-        <Swiper>
+      <div className="products desktop">
           {data.map((product) => {
             return (
               <div className="product">
@@ -63,9 +66,40 @@ export default function Products() {
               </div>
             );
           })}
+      </div>
+
+      <Swiper
+        effect={"coverflow"}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView={"auto"}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: false,
+        }}
+        // pagination={true}
+        navigation={true}
+        className="products mobile"
+      >
+          {data.map((product) => {
+            return (
+              <SwiperSlide className="product">
+                <div className="image">
+                  <img src={product.image} alt="" />
+                </div>
+                <h2>{product.name}</h2>
+                <h3>{product.price}</h3>
+                <p>{product.ingredient}</p>
+                <button>Buy Now</button>
+              </SwiperSlide>
+            );
+          })}
 
         </Swiper>
-      </div>
+
     </Section>
   );
 }
@@ -120,9 +154,22 @@ const Section = styled.section`
     }
   }
 
+  .products.mobile {
+    display: none;
+  }
+  .products.desktop {
+    display: flex;
+  }
+
   @media screen and (min-width: 280px) and (max-width: 720px) {
     .products {
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    .products.mobile {
+      display: flex;
+    }
+    .products.desktop {
+      display: none;
     }
   }
   @media screen and (min-width: 720px) and (max-width: 1080px) {
